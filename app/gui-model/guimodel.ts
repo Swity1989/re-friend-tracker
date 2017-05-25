@@ -83,6 +83,31 @@ export class GuiModel {
                             }
                         ]
                     }
+					{
+                        "id": "groupForm",
+                        "title": "Location",
+                        "formFieldList": [
+                            {
+                                "id": "name",
+                                "type": "text",
+                                "name": "GroupName",
+                                "width": 2,
+                                "required": true
+                            },
+                            {
+                                "type": "deleteButton",
+                                "name": "Delete"
+                            },
+                            {
+                                "type": "cancelButton",
+                                "name": "Cancel"
+                            },
+                            {
+                                "type": "okButton",
+                                "name": "Ok"
+                            }
+                        ]
+                    }
                 ],
                 "pageList": [
                     {
@@ -102,6 +127,13 @@ export class GuiModel {
                                 "icon": "fa-cubes",
                                 "color": "yellow",
                                 "page": "locationspage",
+                            },
+							{
+                                "type": "button",
+                                "name": "Group",
+                                "icon": "fa-cubes",
+                                "color": "yellow",
+                                "page": "grouppage",
                             },
                         ]
                     },
@@ -156,6 +188,22 @@ export class GuiModel {
                                 "form": {
                                     "form": "LocationForm"
                                 }
+                            },
+							{
+                        "id": "grouppage",
+                        "elementList": [
+                            {
+                                "type": "backbutton",
+                            },
+                            {
+                                "type": "newButton",
+                                "name": "Newgroup",
+                                "icon": "fa-home",
+                                "color": "green",
+                                "form": {
+                                    "form": "groupForm"
+                                }
+                            },
                             },
                         ]
                     }
